@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import PostTag from '../components/PostTag.astro';
 const { frontmatter } = Astro.props;
 ---
 
@@ -13,5 +14,15 @@ const { frontmatter } = Astro.props;
     width="300"
     alt={frontmatter.image.alt}
   />
+  <div class="tags">
+    {
+      frontmatter.tags.map((tag) => (
+        <PostTag
+          url={`/tags/${tag}`}
+          tag={tag}
+        />
+      ))
+    }
+  </div>
   <slot />
 </BaseLayout>
