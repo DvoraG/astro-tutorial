@@ -47,6 +47,18 @@ a:focus {
 .expanded {
   display: unset;
 }
+/* NAV TOGGLE */
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+}
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5rem;
@@ -58,5 +70,8 @@ a:focus {
   .nav-links a {
     display: inline-block;
     padding: 15px 20px;
+  }
+  .hamburger {
+    display: none;
   }
 }
