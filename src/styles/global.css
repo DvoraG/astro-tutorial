@@ -8,6 +8,10 @@ html {
   background-color: #f1f5f9;
   font-family: sans-serif;
 }
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
 
 body {
   margin: 0 auto;
@@ -48,6 +52,9 @@ h1 {
 .nav-links a:hover,
 a:focus {
   background-color: #ff9776;
+}
+.dark .nav-links a {
+  color: #fff;
 }
 .expanded {
   display: unset;
@@ -95,4 +102,21 @@ a:focus {
 }
 .tag a {
   color: #00539f;
+}
+/* THEME TOGGLE */
+#themeToggle {
+  border: 0;
+  background: none;
+}
+.sun {
+  fill: black;
+}
+.moon {
+  fill: transparent;
+}
+:global(.dark) .sun {
+  fill: transparent;
+}
+:global(.dark) .moon {
+  fill: white;
 }
